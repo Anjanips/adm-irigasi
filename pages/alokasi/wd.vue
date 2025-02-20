@@ -1,138 +1,192 @@
+<script setup>
+useHead({
+  title: "Alokasi",
+  meta: [
+    {
+      name: "description",
+      content: "Alokasi",
+    },
+  ],
+});
+
+const supabase = useSupabaseClient();
+const visitors = ref([]);
+const selectedVisitor = ref(null); // Visitor yang dipilih untuk diedit
+
+// Fungsi untuk mengambil data alokasi
+const getAlokasi = async () => {
+  const { data } = await supabase.from("alokasi_wd").select("*").order("id", { ascending: true });
+  if (data) {
+    visitors.value = data;
+  }
+};
+
+// Fungsi untuk mengedit data visitor
+const editVisitor = (visitor) => {
+  selectedVisitor.value = { ...visitor }; // Menyalin data visitor yang akan diedit
+};
+
+// Fungsi untuk menyimpan perubahan setelah edit
+const saveChanges = async () => {
+  if (selectedVisitor.value) {
+    const { data, error } = await supabase
+      .from("alokasi_wd")
+      .update({
+        nama_petak: selectedVisitor.value.nama_petak,
+        luas_areal: selectedVisitor.value.luas_areal,
+        realisasi: selectedVisitor.value.realisasi,
+        minggu_ke1: selectedVisitor.value.minggu_ke1,
+      })
+      .eq("id", selectedVisitor.value.id); // Update berdasarkan ID visitor
+
+    if (error) {
+      console.error("Error updating alokasi:", error);
+    } else {
+      // Perbarui data di tabel dan tutup modal
+      const index = visitors.value.findIndex(v => v.id === selectedVisitor.value.id);
+      visitors.value[index] = selectedVisitor.value;
+      selectedVisitor.value = null; // Tutup modal
+    }
+  }
+};
+
+// Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1
+const calculateTotal = () => {
+  const totalLuas = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.luas_areal || 0), 0);
+  const totalRealisasi = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.realisasi || 0), 0);
+  const totalMingguKe1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke1 || 0), 0);
+
+  return { totalLuas, totalRealisasi, totalMingguKe1 };
+};
+
+onMounted(() => {
+  getAlokasi();
+});
+</script>
+
+
+
 <template>
-    <div class="judul m-5 text-center">
-        <h2>DI WANGUNDIREJA KAB CIAMIS DAN KOTA BANJAR</h2>
-        <h3>PERIODE: TANGGAL 1 FEBRUARI s/d 15 FEBRUARI 2025</h3>
-    </div> 
+  <div class="judul m-5 text-center">
+    <h2>DI WANGUNDIREJA KAB CIAMIS DAN KOTA BANJAR</h2>
+    <h3>PERIODE: TANGGAL 1 FEBRUARI s/d 15 FEBRUARI 2025</h3>
+  </div>
+  <div class="table-container">
     <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Nama Petak Tersier</th>
-      <th scope="col">Luas Areal (ha)</th>
-      <th scope="col">Realisasi Areal</th>
-      <th scope="col">Februari 2025, Minggu Ke 1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>BWD 1 Ka</td>
-      <td>7.62</td>
-      <td>7.62</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>BWD 2 Ki</td>
-      <td>4.75</td>
-      <td>4.75</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>BWD 3 Ka</td>
-      <td>21.25</td>
-      <td>21.25</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>BWD 3 Ki</td>
-      <td>3.13</td>
-      <td>3.13</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>BWD 4 Ki</td>
-      <td>16.69</td>
-      <td>16.69</td>
-      <td>0.02</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>BWD 5 Ka</td>
-      <td>2.16</td>
-      <td>2.16</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>BWD 6 Ka</td>
-      <td>5.18</td>
-      <td>5.18</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>BWD 7 Ki</td>
-      <td>10.21</td>
-      <td>10.21</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>BWD 8 Ka</td>
-      <td>6.76</td>
-      <td>6.76</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td>BWD 9 Ki</td>
-      <td>5.97</td>
-      <td>5.97</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th scope="row">11</th>
-      <td>BWD 10 Ka</td>
-      <td>23.70</td>
-      <td>23.70</td>
-      <td>0.02</td>
-    </tr>
-    <tr>
-      <th scope="row">12</th>
-      <td>BWD 10 Ki</td>
-      <td>44.17</td>
-      <td>44.17</td>
-      <td>0.04</td>
-    </tr>
-    <tr>
-      <th scope="row">13</th>
-      <td>BWD 11 Ki</td>
-      <td>21.44</td>
-      <td>21.44</td>
-      <td>0.02</td>
-    </tr>
-    <tr>
-      <th scope="row">14</th>
-      <td>BWD 12 Ki</td>
-      <td>8.90</td>
-      <td>8.90</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th scope="row">15</th>
-      <td>BWD 13 Ka</td>
-      <td>20.63</td>
-      <td>20.63</td>
-      <td>0.02</td>
-    </tr>
-    <tr>
-      <th scope="row">16</th>
-      <td>BWD 13 Ki</td>
-      <td>14.46</td>
-      <td>14.46</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-        <th scope="row"></th>
-        <td>Jumlah Akhir</td>
-        <td>217.00</td>
-        <td>217.00</td>
-        <td>0.195</td>
-    </tr>
-  </tbody>
-</table>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Nama Petak Tersier</th>
+          <th scope="col">Luas Areal (ha)</th>
+          <th scope="col">Realisasi Areal</th>
+          <th scope="col">Februari 2025, Minggu Ke 1</th>
+          <th scope="col">Aksi</th> <!-- Kolom aksi untuk tombol edit -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(visitor, i) in visitors" :key="i">
+          <th scope="row">{{ i + 1 }}.</th>
+          <td>{{ visitor.nama_petak }}</td>
+          <td>{{ visitor.luas_areal }}</td>
+          <td>{{ visitor.realisasi }}</td>
+          <td>{{ visitor.minggu_ke1 }}</td>
+          <td>
+            <button @click="editVisitor(visitor)" class="btn btn-warning">Edit</button> <!-- Tombol edit -->
+          </td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td><strong>Jumlah Akhir</strong></td>
+          <td>{{ calculateTotal().totalLuas.toFixed(2) }}</td> <!-- Menampilkan total luas areal -->
+          <td>{{ calculateTotal().totalRealisasi.toFixed(2) }}</td> <!-- Menampilkan total realisasi -->
+          <td>{{ calculateTotal().totalMingguKe1.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-1 -->
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal untuk edit data visitor -->
+  <div v-if="selectedVisitor" class="modal">
+    <div class="modal-content">
+      <h2>Edit Data Alokasi</h2>
+      <form @submit.prevent="saveChanges">
+        <div>
+          <label for="nama_petak">Nama Petak Tersier:</label>
+          <input type="text" v-model="selectedVisitor.nama_petak" />
+        </div>
+        <div>
+          <label for="luas_areal">Luas Areal (ha):</label>
+          <input type="text" v-model="selectedVisitor.luas_areal" />
+        </div>
+        <div>
+          <label for="realisasi">Realisasi Areal:</label>
+          <input type="text" v-model="selectedVisitor.realisasi" />
+        </div>
+        <div>
+          <label for="minggu_ke1">Februari 2025, Minggu Ke 1:</label>
+          <input type="text" v-model="selectedVisitor.minggu_ke1" />
+        </div>
+        <button type="submit">Simpan</button>
+        <button type="button" @click="selectedVisitor = null">Batal</button>
+      </form>
+    </div>
+  </div>
 </template>
+
+
+<style scoped>
+.table-container {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+
+.table td,
+.table th {
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: green;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: red;
+  color: white;
+}
+
+/* Gaya untuk modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+</style>
