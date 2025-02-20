@@ -127,7 +127,7 @@ onMounted(() => {
     <!-- Modal untuk edit data visitor -->
     <div v-if="selectedVisitor" class="modal">
         <div class="modal-content">
-            <h2>Edit Data Visitor</h2>
+            <h2>Edit Data</h2>
             <form @submit.prevent="saveChanges">
                 <div>
                     <label for="nama_bendung">Nama Bendung:</label>
