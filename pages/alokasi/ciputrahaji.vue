@@ -36,6 +36,7 @@ const saveChanges = async () => {
                 luas_areal: selectedVisitor.value.luas_areal,
                 realisasi: selectedVisitor.value.realisasi,
                 minggu_ke1: selectedVisitor.value.minggu_ke1,
+                minggu_ke2: selectedVisitor.value.minggu_ke2,
             })
             .eq("id", selectedVisitor.value.id); // Update berdasarkan ID visitor
 
@@ -55,8 +56,9 @@ const calculateTotal = () => {
     const totalLuas = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.luas_areal || 0), 0);
     const totalRealisasi = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.realisasi || 0), 0);
     const totalMingguKe1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke1 || 0), 0);
+    const totalMingguKe2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.minggu_ke2 || 0), 0);
 
-    return { totalLuas, totalRealisasi, totalMingguKe1 };
+    return { totalLuas, totalRealisasi, totalMingguKe1, totalMingguKe2 };
 };
 
 onMounted(() => {
@@ -80,6 +82,7 @@ onMounted(() => {
                     <th scope="col">Luas Areal (ha)</th>
                     <th scope="col">Realisasi Areal</th>
                     <th scope="col">Februari 2025, Minggu Ke 1</th>
+                    <th scope="col">Februari 2025, Minggu Ke 2</th>
                     <th scope="col">Aksi</th> <!-- Kolom aksi untuk tombol edit -->
                 </tr>
             </thead>
@@ -90,6 +93,7 @@ onMounted(() => {
                     <td>{{ visitor.luas_areal }}</td>
                     <td>{{ visitor.realisasi }}</td>
                     <td>{{ visitor.minggu_ke1 }}</td>
+                    <td>{{ visitor.minggu_ke2 }}</td>
                     <td>
                         <button @click="editVisitor(visitor)" class="btn btn-warning">Edit</button> <!-- Tombol edit -->
                     </td>
@@ -100,6 +104,7 @@ onMounted(() => {
                     <td>{{ calculateTotal().totalLuas.toFixed(2) }}</td> <!-- Menampilkan total luas areal -->
                     <td>{{ calculateTotal().totalRealisasi.toFixed(2) }}</td> <!-- Menampilkan total realisasi -->
                     <td>{{ calculateTotal().totalMingguKe1.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-1 -->
+                    <td>{{ calculateTotal().totalMingguKe2.toFixed(2) }}</td> <!-- Menampilkan total minggu ke-1 -->
                     <td></td>
                 </tr>
             </tbody>
@@ -126,6 +131,10 @@ onMounted(() => {
                 <div>
                     <label for="minggu_ke1">Februari 2025, Minggu Ke 1:</label>
                     <input type="text" v-model="selectedVisitor.minggu_ke1" />
+                </div>
+                <div>
+                    <label for="minggu_ke1">Februari 2025, Minggu Ke 2:</label>
+                    <input type="text" v-model="selectedVisitor.minggu_ke2" />
                 </div>
                 <button type="submit">Simpan</button>
                 <button type="button" @click="selectedVisitor = null">Batal</button>
