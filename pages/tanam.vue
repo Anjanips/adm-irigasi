@@ -11,7 +11,9 @@ useHead({
 
 const supabase = useSupabaseClient();
 const visitors = ref([]);
-const selectedVisitor = ref(null); // Menyimpan data visitor yang dipilih untuk diedit
+const selectedVisitor = ref(null);
+const periodeData = ref(null); // Data periode dari database
+const editingPeriode = ref(false); // Status edit periode
 
 // Fungsi untuk mengambil data tanam dari Supabase
 const getTanam = async () => {
@@ -28,6 +30,79 @@ const getTanam = async () => {
     } else {
         console.error('Error fetching tanam data:', error);
     }
+};
+
+// Fungsi untuk mengambil data periode dari database
+const getPeriode = async () => {
+    try {
+        const { data, error } = await supabase.from("periode").select("*").single();
+
+        if (error) {
+            throw error;
+        }
+
+        if (data) {
+            periodeData.value = data;
+        } else {
+            // Jika tidak ada data, buat objek kosong
+            periodeData.value = {
+                judul: "PERIODE: TANGGAL 1 FEBRUARI s/d 15 FEBRUARI 2025" // Default fallback
+            };
+        }
+    } catch (error) {
+        console.error("Error fetching periode data:", error.message);
+        // Tetap sediakan nilai default jika terjadi error
+        periodeData.value = {
+            judul: "PERIODE: TANGGAL 1 FEBRUARI s/d 15 FEBRUARI 2025"
+        };
+    }
+};
+
+// Fungsi untuk mengedit periode
+const editPeriode = () => {
+    editingPeriode.value = true;
+};
+
+// Fungsi untuk menyimpan perubahan periode
+const savePeriodeChanges = async () => {
+    try {
+        if (!periodeData.value.judul || periodeData.value.judul.trim() === '') {
+            alert("Judul periode tidak boleh kosong");
+            return;
+        }
+
+        if (periodeData.value.id) {
+            // Update data yang sudah ada
+            const { error } = await supabase
+                .from("periode")
+                .update({ judul: periodeData.value.judul })
+                .eq("id", periodeData.value.id);
+
+            if (error) throw error;
+        } else {
+            // Insert data baru jika belum ada
+            const { error } = await supabase
+                .from("periode")
+                .insert([{ judul: periodeData.value.judul }]);
+
+            if (error) throw error;
+
+            // Ambil data yang baru saja diinsert untuk mendapatkan ID
+            await getPeriode();
+        }
+
+        editingPeriode.value = false;
+    } catch (error) {
+        console.error("Error saving periode data:", error.message);
+        alert("Gagal menyimpan data periode: " + error.message);
+    }
+};
+
+// Fungsi untuk membatalkan edit periode
+const cancelPeriodeEdit = () => {
+    editingPeriode.value = false;
+    // Reload data periode untuk memastikan data sesuai dengan database
+    getPeriode();
 };
 
 // Fungsi untuk mengedit visitor
@@ -68,6 +143,7 @@ const saveChanges = async () => {
 };
 
 onMounted(() => {
+    getPeriode();
     getTanam();
 });
 </script>
@@ -75,27 +151,24 @@ onMounted(() => {
 <template>
     <div class="judul m-5 text-center">
         <h2>REALISASI TANAM</h2>
-        <div>
-            <!-- Tampilkan judul periode dari database -->
-            <div v-if="!editingPeriode">
-                <h3>{{ periodeData?.judul }}</h3>
-                <button @click="editPeriode" class="btn btn-primary">Edit Periode</button>
-            </div>
+        <div v-if="!editingPeriode">
+            <h3>{{ periodeData?.judul }}</h3>
+            <button @click="editPeriode" class="btn btn-primary">Edit Periode</button>
+        </div>
 
-            <!-- Form edit periode -->
-            <div v-else class="periode-edit-form">
-                <div class="form-group">
-                    <label for="judul">Judul Periode:</label>
-                    <input type="text" id="judul" v-model="periodeData.judul" class="form-control"
-                        placeholder="Masukkan judul periode" />
-                </div>
-                <div class="button-group">
-                    <button @click="savePeriodeChanges" class="btn btn-success">Simpan</button>
-                    <button @click="cancelPeriodeEdit" class="btn btn-danger">Batal</button>
-                </div>
+        <div v-else class="periode-edit-form">
+            <div class="form-group">
+                <label for="judul">Judul Periode:</label>
+                <input type="text" id="judul" v-model="periodeData.judul" class="form-control"
+                    placeholder="Masukkan judul periode" />
+            </div>
+            <div class="button-group">
+                <button @click="savePeriodeChanges" class="btn btn-success">Simpan</button>
+                <button @click="cancelPeriodeEdit" class="btn btn-danger">Batal</button>
             </div>
         </div>
     </div>
+
 
     <div class="table-container">
         <table class="table table-bordered p-5">
