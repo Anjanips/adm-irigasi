@@ -74,8 +74,27 @@ onMounted(() => {
 
 <template>
     <div class="judul m-5 text-center">
-        <h1>REALISASI TANAM </h1>
-        <h2>Periode Tanggal 1 Februari s/d 15 Februari 2025</h2>
+        <h2>REALISASI TANAM</h2>
+        <div>
+            <!-- Tampilkan judul periode dari database -->
+            <div v-if="!editingPeriode">
+                <h3>{{ periodeData?.judul }}</h3>
+                <button @click="editPeriode" class="btn btn-primary">Edit Periode</button>
+            </div>
+
+            <!-- Form edit periode -->
+            <div v-else class="periode-edit-form">
+                <div class="form-group">
+                    <label for="judul">Judul Periode:</label>
+                    <input type="text" id="judul" v-model="periodeData.judul" class="form-control"
+                        placeholder="Masukkan judul periode" />
+                </div>
+                <div class="button-group">
+                    <button @click="savePeriodeChanges" class="btn btn-success">Simpan</button>
+                    <button @click="cancelPeriodeEdit" class="btn btn-danger">Batal</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="table-container">
