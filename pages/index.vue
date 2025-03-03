@@ -59,23 +59,6 @@
         </div>
       </div>
     </div>
-    <div class="container ps-4">
-      <div class="row d-flex justify-content-evenly">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="..." class="" alt="">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">,,,</h5>
-                <p class="card-text">keterangan</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="profil" class="container">
           <div class="section">
               <h2 class="p-3">CAI TEPI SAWAH</h2>
