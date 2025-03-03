@@ -12,7 +12,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <p class="card-text">Gambaran Umum</p>
-                            <p class="card-text text-center">Daerah Irigasi Cimulu merupakan Irigasi Lintas, yang 
+                            <p class="card-text">Daerah Irigasi Cimulu merupakan Irigasi Lintas, yang 
                                                     melintasi Kabupaten Tasikmalaya dan Kota 
                                                     Tasikmalaya mengairi areal potensial hasil 
                                                     perencanaan A = 1559 Ha, meliputi :                            

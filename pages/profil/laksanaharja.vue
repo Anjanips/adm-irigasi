@@ -12,7 +12,7 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text text-center">Daerah Irigasi Laksana Harja secara administratif lokasi bendung 
+                          <p class="card-text">Daerah Irigasi Laksana Harja secara administratif lokasi bendung 
                                                 terletak di  Desa Ratawangi, Kecamatan Banjarsari, Kabupaten 
                                                 Ciamis, secara geografis astronomis terletak di koordinat 
                                                 7° 30.501'S , 108° 38.339'E 

@@ -12,7 +12,7 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text text-center">Pengambilan air / Sumber air DI. Ciputrahaji dari 
+                          <p class="card-text">Pengambilan air / Sumber air DI. Ciputrahaji dari 
                                                 Sungai Ciputrahaji di bendung Ciputrahaji yang 
                                                 terletak di Dusun Sukahurip Desa Sukasari 
                                                 Kecamatan Banjarsari Kabupaten Ciamis. Mengairi 

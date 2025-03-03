@@ -12,7 +12,7 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text text-center">Daerah Irigasi Wangundireja adalah Irigasi Lintas  
+                          <p class="card-text">Daerah Irigasi Wangundireja adalah Irigasi Lintas  
                                                 antara Kab. Ciamis dan Kota Banjar. Untuk 
                                                 Pengelolaannya dilimpahkan Kepada Dinas  PSDA 
                                                 Provinsi Jawa Barat  melalui Balai PSDA Wilayah 

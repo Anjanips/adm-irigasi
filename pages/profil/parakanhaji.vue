@@ -12,7 +12,7 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text text-center">Daerah Irigasi Parakan Haji secara administratif lokasi bangunan 
+                          <p class="card-text">Daerah Irigasi Parakan Haji secara administratif lokasi bangunan 
                                                         utama terletak di  Desa Sirna Jaya, Kecamatan Karang Jaya, 
                                                         Kabupaten Tasikmalaya, secara geografis astronomis terletak di 
                                                         koordinat   7° 26.011'S,  108° 24.894'E 

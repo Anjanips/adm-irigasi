@@ -12,7 +12,7 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text text-center">Daerah Irigasi Cikembang merupakan irigasi lintas 
+                          <p class="card-text">Daerah Irigasi Cikembang merupakan irigasi lintas 
                                                 Kabupaten Ciamis dan Kota Banjar yang mengambil 
                                                 dari sungai Cikembang melalui bendung Cikembang. 
                                                 Bendung Cikembang sendiri di bangun pada tahun 
