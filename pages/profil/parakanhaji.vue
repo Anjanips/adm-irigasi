@@ -12,10 +12,20 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Daerah Irigasi Parakan Haji secara administratif lokasi bangunan 
+                                                        utama terletak di  Desa Sirna Jaya, Kecamatan Karang Jaya, 
+                                                        Kabupaten Tasikmalaya, secara geografis astronomis terletak di 
+                                                        koordinat   7° 26.011'S,  108° 24.894'E 
+                                                        Saat ini, sumber air DI. Parakan Haji berasal dari Sungai Ciseel 
+                                                        yang dialirkan melalui Bangunan Utama Free Intake untuk 
+                                                        melayani kebutuhan air persawahannya yang terletak di kanan 
+                                                        sumber air. 
+                                                        Pada kesempatan kali ini tim dari Bidang Perencanaan Teknik 
+                                                        bersama dengan tim dari UPTD PSDA WS Citanduy 
+                                                        berkesempatan untuk melaksanakan Survei ke D.I Parakan Haji 
+                                                        Kabupaten Tasikmalaya. 
+                                                        Peta Daerah Irigasi dan Peta
+                                                        lokasi Bendung Parakanhaji, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

@@ -12,10 +12,22 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Daerah Irigasi Laksana Harja secara administratif lokasi bendung 
+                                                terletak di  Desa Ratawangi, Kecamatan Banjarsari, Kabupaten 
+                                                Ciamis, secara geografis astronomis terletak di koordinat 
+                                                7° 30.501'S , 108° 38.339'E 
+                                                Saat ini, sumber air DI. Laksana Harja berasal dari Sungai 
+                                                Cikawasen yang dialirkan melalui Bangunan Utama Bendung 
+                                                tetap untuk melayani kebutuhan air persawahannya yang terletak 
+                                                di kanan dan kiri sumber air. 
+                                                Untuk mencapai lokasi DI. Laksana Harja ini dapat ditempuh 
+                                                dengan kendaraan roda empat melalui jalur sebagai berikut : 
+                                                Lokasi Bendung Laksana Harja dapat ditempuh dengan 
+                                                kendaraan roda 4 (empat) dengan rincian sebagai berikut : - Kantor Dinas SDA menuju tol pateur dengan jarak + 6 
+                                                km dapat ditempuh dengan waktu 15 menit - Tol Pasteur - Tol Cileunyi dengan jarak + 30 km yang 
+                                                dapat ditempuh dengan waktu + 30 Menit 
+                                                Peta Daerah Irigasi dan Peta
+                                                lokasi Bendung Laksanaharja, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

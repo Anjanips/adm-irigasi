@@ -12,10 +12,33 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Daerah Irigasi Cigede merupakan irigasi lintas 
+                                                Kabupaten dan Kota Tasikmalaya yang menurut 
+                                                Peraturan Pemerintah No. 20 tentang Irigasi, bahwa 
+                                                Daerah Irigasi Cigede merupakan kewenangan 
+                                                Pemerintah Provinsi Jawa Barat yang dikelola oleh 
+                                                Dinas PSDA Provinsi Jawa Barat melalui Balai PSDA 
+                                                Wilayah Sungai Citanduy. Daerah Irigasi Cigede 
+                                                mengambil air dari sungai Ciloseh melalui Bendung 
+                                                Cigede. 
+                                                Bendung Cigede sendiri dibangun pada tahun 1975 
+                                                melalui anggaran APBD Provinsi. Lokasi Bendung 
+                                                Cigede di Desa Sukagalih Kecamatan Sukaratu 
+                                                Kabupaten Tasikmalaya. Areal awal Bendung Cigede 
+                                                601 Ha, namun karena alih fungsi areal sekarang 
+                                                tinggal 542 Ha yang tersebar di 2 (dua) Kecamatan, 
+                                                5 (lima) Desa yaitu: 
+                                                • Kecamatan Sukaratu  
+                                                1. Desa Sukagalih   
+                                                • Kecamatan Indihiang  
+                                                1. Desa Sukamaju Kidul  
+                                                2. Desa Sukamaju Kaler  
+                                                3. Desa Indihiang   
+                                                4. Desa Sirnagalih   
+                                                :  203  Ha  
+                                                :  339  Ha
+                                                Peta Daerah Irigasi dan Peta
+                                                lokasi Bendung Cigede, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

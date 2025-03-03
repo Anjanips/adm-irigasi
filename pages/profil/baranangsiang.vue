@@ -12,10 +12,9 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Saat ini, sumber air DI. Baranangsiang berasal dari sungai Ciloseh yang dialirkan melalui bangunan utama bendung tetap Untuk
+                            melayani kebutuhan air persawahannya yang terletak di kanan sumber air, dimana areal sebelah kanan sungai adalah saluran induk baranangsiang, peta daerah irigasi
+                            dan peta lokasi bendung baranangsiang, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

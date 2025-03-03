@@ -12,10 +12,29 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Daerah Irigasi Wangundireja adalah Irigasi Lintas  
+                                                antara Kab. Ciamis dan Kota Banjar. Untuk 
+                                                Pengelolaannya dilimpahkan Kepada Dinas  PSDA 
+                                                Provinsi Jawa Barat  melalui Balai PSDA Wilayah 
+                                                Sungai Citanduy. Irigasi Terseburt Mengairi 217 Ha yang tersebar di                 
+                                                2 Kabupaten / Kota diantaranya : 
+                                                Kabupaten Ciamis Kecamatan Cisaga terdiri dari  : - Desa  Karyamulya         - Desa  Wangundirja        - Desa  Cisaga                  - Desa  Mekarmukti      
+                                                Kota  Banjar  terdiri dari  - Desa   Purwaharja           
+                                                Daerah Irigasi Wangundireja Dibangun Pada Tahun 
+                                                1913 Pada Jaman Pemerintahan Hindia Belanda, 
+                                                dilanjutkan Pemerinta Republik Indonesia pada 
+                                                Tahun 1968 oleh Jawatan Pemerintahan Umum 
+                                                Provinsi DI I Jawa Barat, sebagai pelaksana awal 
+                                                dilaksanakan oleh Jawatan PU Kabupaten Ciamis 
+                                                Seksi Pangairan Kabupaten Ciamis, dikarenakan Luas 
+                                                Areal Kurang dari 500 Ha, Yang mengacu Pada 
+                                                Peraturan bahwa untuk melaksanakan ketentuan 
+                                                Pasal 73 Peraturan Pemerintah Nonor 20 tahun 2006 
+                                                tentang Irigasi, perlu menetapkan Peraturan Menteri 
+                                                Pekerjaan Umum tentang Pedoman Pengelolaan Aset 
+                                                Irigasi.
+                                                Peta Daerah Irigasi dan Peta
+                                                lokasi Bendung Wangundireja, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

@@ -12,10 +12,20 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <p class="card-text">Gambaran Umum</p>
-                            <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                           Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                           dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                           lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                            <p class="card-text text-center">Daerah Irigasi Cimulu merupakan Irigasi Lintas, yang 
+                                                    melintasi Kabupaten Tasikmalaya dan Kota 
+                                                    Tasikmalaya mengairi areal potensial hasil 
+                                                    perencanaan A = 1559 Ha, meliputi :                            
+                                                    Kota Tasikmalaya A = 1067 Ha dan Kabupaten 
+                                                    Tasikmalaya A = 492 Ha,.  
+                                                    Irigasi Cimulu pembangunan konstruksinya dimulai 
+                                                    jaman Belanda pada tahun 1918 dan untuk operasi 
+                                                    pemeliharaannya masih berjalan sehingga 
+                                                    diharapkan Jaringan Irigasi Cimulu berfungsi secara 
+                                                    keseluruhan ( untuk mengairi areal sawah seluas 
+                                                    1559 Ha ).
+                                                    Peta Daerah Irigasi dan Peta
+                                                    lokasi Bendung Cimulu, dapat digambarkan sebagai berikut : </p>
                         </div>
                     </div>
                 </div>

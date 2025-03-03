@@ -12,10 +12,23 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Daerah Irigasi Gunung Putri 1 merupakan irigasi 
+                                                lintas antara Kabupaten Ciamis dan Kota Banjar yang  
+                                                pengelolaannya dilimpahkan Kepada Dinas  PSDA 
+                                                Provinsi Jawa Barat  melalui Balai PSDA Wilayah 
+                                                Sungai Citanduy. 
+                                                Daerah Irigasi Gunung Putri I Mengairi 500 Ha yang 
+                                                tersebar di 2 Kabupaten / Kota diantaranya : 
+                                                Kabupaten Ciamis : - Desa  Sukajaya  Kec. Pamarican     - Desa  Bangunsari Kec. Pamarican    
+                                                Kota  Banjar  :  - Desa   Binangun Kec. Pataruman          
+                                                Irigasi Gunung Putri 1 pembangunan konstruksinya 
+                                                dimulai pada tahun 1971 untuk operasi dan 
+                                                Pemeliharaan masih berjalan sehingga diharapkan 
+                                                Jaringan Irigasi Gunung Putri 1 berfungsi secara 
+                                                keseluruhan    
+                                                ( untuk mengairi areal sawah seluas 500 Ha.)
+                                                Peta Daerah Irigasi dan Peta
+                                                lokasi Bendung Gunungputri, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

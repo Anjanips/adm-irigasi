@@ -12,10 +12,27 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Pengambilan air / Sumber air DI. Ciputrahaji dari 
+                                                Sungai Ciputrahaji di bendung Ciputrahaji yang 
+                                                terletak di Dusun Sukahurip Desa Sukasari 
+                                                Kecamatan Banjarsari Kabupaten Ciamis. Mengairi 
+                                                areal potensial hasil perencanaan A = 1.700 Ha. 
+                                                Namun dengan kondisi saat ini ketersediaan air 
+                                                hanya mampu mengairi areal 1.258 Ha, Khususnya 
+                                                pada musim kemarau untuk memenuhi kebutuhan air 
+                                                sisanya dari suplesi melalui bendung Manganti.  
+                                                Areal Daerah Irigasi Ciputrahaji berada di Kabupaten 
+                                                Ciamis yang tersebar di 2 (dua) Kecamatan yaitu  
+                                                
+                                                 Kecamatan Banjarsari  828 Ha - Desa Sindangsari  A = 287,48 Ha - Desa Sindang Hayu  A = 164,56 Ha - Desa Purwasari  A = 86,38   HaA - Desa Sindang Asih  A = 309,18 Ha 
+                                                 Kecamatan Mangunjaya : - Desa Sindang Jaya  A = 313,90 Ha - Desa Jang Raga   A = 116,20 Ha 
+                                                
+                                                Daerah Irigasi Ciputrahaji dibangun pada Tahun 
+                                                1927, selesai pada Tahun 1932. Daerah Irigasi 
+                                                Ciputrahaji mulai berfungsi sepenuhnya pada Tahun 
+                                                1932. 
+                                                Peta Daerah Irigasi dan Peta
+                                                lokasi Bendung Ciputrahaji, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>

@@ -12,10 +12,32 @@
                   <div class="col-md-8">
                       <div class="card-body">
                           <p class="card-text">Gambaran Umum</p>
-                          <p class="card-text">Saat ini, Sumber Air DI. Muhara berasal dari Sungai Cimampang yang dialirkan melalui Bangunan utama
-                                                                                         Bendung tetap untuk melayani kebutuhan air persawahannya yang terletak di kanan sumber air,
-                                                                                         dimana areal sebelah kanan sungai adalah saluran induk Muhara, Peta Daerah Irigasi dan Peta
-                                                                                         lokasi Bendung Muhara, dapat digambarkan sebagai berikut : </p>
+                          <p class="card-text text-center">Daerah Irigasi Cikembang merupakan irigasi lintas 
+                                                Kabupaten Ciamis dan Kota Banjar yang mengambil 
+                                                dari sungai Cikembang melalui bendung Cikembang. 
+                                                Bendung Cikembang sendiri di bangun pada tahun 
+                                                1971 melalui swadaya masyarakat daerah setempat, 
+                                                yang terdiri dari Desa Raksabaya Kecamatan 
+                                                Cimaragas, Desa Bojongmalang Kecamatan 
+                                                Cimaragas, Desa Pasirnagara Kecamatan Pamarican, 
+                                                Desa Bantarsari Kecamatan Pamarican, Desa 
+                                                Situbatu dan Desa Neglasari Kota Banjar. Lokasi 
+                                                Bendung Cikembang terletak di Desa Raksabaya 
+                                                Kecamatan Cimaragas Kabupaten Ciamis. Areal awal 
+                                                Perencanan DI. Cikembang 1000 Ha, Untuk 
+                                                kabupaten Ciamis 533,6 tersebar di 2 Kecamatan, 3 
+                                                Desa yaitu; -  Kecamatan Cimaragas 
+                                                1. Desa Raksabaya                : 68,5 Ha 
+                                                2. Desa Bojongmalang           : 37 Ha     
+                                                        -  Kecamatan Pamarican             
+                                                1. Desa Pasirnagara               : 248,6 Ha 
+                                                2. Desa Bantarsari                 : 457.9 Ha 
+                                                
+                                                Untuk Kota Banjar Yaitu; -  Kecamatan Banjar 
+                                                1. Desa Situbatu                     : 52.5 Ha 
+                                                2. Desa Neglasari                    : 135.5 Ha 
+                                                Peta Daerah Irigasi dan Peta
+                                                lokasi Bendung Cikembang, dapat digambarkan sebagai berikut : </p>
                       </div>
                   </div>
               </div>
