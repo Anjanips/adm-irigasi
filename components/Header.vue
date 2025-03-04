@@ -42,7 +42,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/poi">PETUNJUK OPERASI IRIGASI</a>
+            <a class="nav-link active" href="/poi">PETUNJUK OPERASI</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="/pep">PETUNJUK PEMELIHARAAN</a>
