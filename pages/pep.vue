@@ -1,6 +1,6 @@
 <template>
     <div class="judul m-5 text-center">
-        <h2>PETUNJUK OPERASI</h2>
+        <h2>PETUNJUK PEMELIHARAAN</h2>
     </div>
     <div class="card text-bg-dark">
         <img src="assets/img/sc1.jpg" class="card-img" alt="...">
