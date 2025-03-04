@@ -31,5 +31,11 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Sukamaju Kaler, Kec. Indihiang </small></p>
                 </div>
         </div>
+        <div class="card mb-3">
+            <img src="assets/img/Skema jaringan baranangsiang[1].jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="assets/img/Skema bangunan baranangsiang[1].jpg" class="card-img-top" alt="...">
+        </div>
   </div>
 </template>

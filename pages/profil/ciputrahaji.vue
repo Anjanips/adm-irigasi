@@ -48,5 +48,11 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Sindangjaya, Desa Jangraga Kec. Mangunjaya </small></p>
                 </div>
         </div>
+        <div class="card mb-3">
+            <img src="assets/img/skema jaringan Cph[1].jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="assets/img/skema bang Cph[1].jpg" class="card-img-top" alt="...">
+        </div>
   </div>
 </template>

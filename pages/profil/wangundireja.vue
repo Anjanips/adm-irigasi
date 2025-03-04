@@ -50,5 +50,11 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Purwaharja, Kec. Purwaharja </small></p>
                 </div>
         </div>
+        <div class="card mb-3">
+            <img src="assets/img/skema jaringan WD[1].jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="assets/img/skema bangunan WD[1].jpg" class="card-img-top" alt="...">
+        </div>
   </div>
 </template>

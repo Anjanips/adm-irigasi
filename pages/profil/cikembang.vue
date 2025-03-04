@@ -54,5 +54,11 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Neglasari, Desa Situbatu Kec. Banjar </small></p>
                 </div>
         </div>
+        <div class="card mb-3">
+            <img src="assets/img/skema jaringan cikembang[1].jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="assets/img/skema Bang ckmbng[1].jpg" class="card-img-top" alt="...">
+        </div>
   </div>
 </template>

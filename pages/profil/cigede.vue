@@ -54,5 +54,11 @@
                         <p class="card-text"><small class="text-body-black">Melintasi: Desa Sukamaju Kidul, Desa Indihiang Kec. Indihiang </small></p>
                 </div>
         </div>
+        <div class="card mb-3">
+            <img src="assets/img/Skema jaringa cigede[1].jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card mb-3">
+            <img src="assets/img/skeme bangunan cigede[1].jpg" class="card-img-top" alt="...">
+        </div>
   </div>
 </template>
