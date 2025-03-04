@@ -150,7 +150,7 @@ onMounted(() => {
 
 <template>
     <div class="judul m-5 text-center">
-        <h2>REALISASI TANAM</h2>
+        <h2>PEMANTAUAN KONDISI TANAMAN</h2>
         <div v-if="!editingPeriode">
             <h3>{{ periodeData?.judul }}</h3>
             <button @click="editPeriode" class="btn btn-primary">Edit Periode</button>
