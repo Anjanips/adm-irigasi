@@ -48,7 +48,7 @@
             <a class="nav-link active" href="/pep">PETUNJUK PEMELIHARAAN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/tanam">REALISASI TANAM</a>
+            <a class="nav-link active" href="/tanam">PEMANTAUAN KONDISI TANAMAN</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
