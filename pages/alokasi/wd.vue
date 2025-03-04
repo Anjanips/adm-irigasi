@@ -144,7 +144,7 @@ onMounted(() => {
 
 <template>
   <div class="judul m-5 text-center">
-    <h2>DI GUNUNGPUTRI KAB CIAMIS DAN KOTA BANJAR</h2>
+    <h2>DI WANGUNDIREJA KAB CIAMIS DAN KOTA BANJAR</h2>
     <div>
       <!-- Tampilkan judul periode dari database -->
       <div v-if="!editingPeriode">
