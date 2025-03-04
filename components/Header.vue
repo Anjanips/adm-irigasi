@@ -41,6 +41,20 @@
               <li><a class="dropdown-item" href="/profil/parakanhaji">DI PARAKANHAJI KAB TASIK DAN CIAMIS</a></li>
             </ul>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              ASET IRIGASI
+            </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/aset/acimulu">CIMULU</a></li>
+            <li><a class="dropdown-item" href="/aset/acigede">CIGEDE</a></li>
+            <li><a class="dropdown-item" href="/aset/agnputri">GUNUNGPUTRI</a></li>
+            <li><a class="dropdown-item" href="/aset/acikembang">CIKEMBANG</a></li>
+            <li><a class="dropdown-item" href="/aset/awd">WANGUNDIREJA</a></li>
+            <li><a class="dropdown-item" href="/aset/achaji">CIPUTRAHAJI</a></li>
+          </ul>
+          </li>
           <li class="nav-item">
             <a class="nav-link active" href="/poi">PETUNJUK OPERASI</a>
           </li>
