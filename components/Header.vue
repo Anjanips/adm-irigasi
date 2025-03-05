@@ -36,8 +36,7 @@
               </li>
               <li><a class="dropdown-item" href="/profil/gunungputri">DI GUNUNGPUTRI KAB CIAMIS DAN KOTA BANJAR</a></li>
               <li><a class="dropdown-item" href="/profil/ciputrahaji">DI CIPUTRAHAJI CIAMIS DAN PANGANDARAN</a></li>
-              <li><a class="dropdown-item" href="/profil/laksanaharja">DI LAKSANAHARJA KAB CIAMIS DAN PANGANDARAN</a>
-              </li>
+              <li><a class="dropdown-item" href="/profil/laksanaharja">DI LAKSANAHARJA KAB CIAMIS DAN PANGANDARAN</a></li>
               <li><a class="dropdown-item" href="/profil/parakanhaji">DI PARAKANHAJI KAB TASIK DAN CIAMIS</a></li>
             </ul>
           </li>
@@ -47,12 +46,16 @@
               ASET IRIGASI
             </a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/aset/amuhara">MUHARA</a></li>
+            <li><a class="dropdown-item" href="/aset/absiang">BARANANGSIANG</a></li>
             <li><a class="dropdown-item" href="/aset/acimulu">CIMULU</a></li>
             <li><a class="dropdown-item" href="/aset/acigede">CIGEDE</a></li>
-            <li><a class="dropdown-item" href="/aset/agnputri">GUNUNGPUTRI</a></li>
             <li><a class="dropdown-item" href="/aset/acikembang">CIKEMBANG</a></li>
             <li><a class="dropdown-item" href="/aset/awd">WANGUNDIREJA</a></li>
+            <li><a class="dropdown-item" href="/aset/agnputri">GUNUNGPUTRI</a></li>
             <li><a class="dropdown-item" href="/aset/achaji">CIPUTRAHAJI</a></li>
+            <li><a class="dropdown-item" href="/aset/alaksana">LAKSANAHARJA</a></li>
+            <li><a class="dropdown-item" href="/aset/aphaji">PARAKANHAJI</a></li>
           </ul>
           </li>
           <li class="nav-item">
