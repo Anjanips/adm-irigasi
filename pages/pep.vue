@@ -93,17 +93,17 @@
         </div>
     </div>
     <div class="card text-bg-dark">
-        <img src="assets/img/sc19.jpg" class="card-img" alt="...">
+        <img src="assets/img/edit1.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
         </div>
     </div>
     <div class="card text-bg-dark">
-        <img src="assets/img/sc20.jpg" class="card-img" alt="...">
+        <img src="assets/img/edit2.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
         </div>
     </div>
     <div class="card text-bg-dark">
-        <img src="assets/img/sc21.jpg" class="card-img" alt="...">
+        <img src="assets/img/edit3.jpg" class="card-img" alt="...">
         <div class="card-img-overlay">
         </div>
     </div>
