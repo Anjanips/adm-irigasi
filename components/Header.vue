@@ -65,6 +65,9 @@
             <a class="nav-link active" href="/pep">PETUNJUK PEMELIHARAAN</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link active" href="/gambarp">GAMBAR PEMELIHARAAN</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" href="/tanam">PEMANTAUAN KONDISI TANAMAN</a>
           </li>
           <li class="nav-item dropdown">
