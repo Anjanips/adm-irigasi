@@ -144,7 +144,7 @@ onMounted(() => {
 
 <template>
   <div class="judul m-5 text-center">
-    <h2>INDEK PERTANAMAN (%)</h2>
+    <h2>INDEK PERTANAMAN (IP)</h2>
     <div>
       <!-- Tampilkan judul periode dari database -->
       <div v-if="!editingPeriode">
