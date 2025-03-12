@@ -85,6 +85,9 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a class="nav-link active" href="/ip">IP</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" href="/iksi">IKSI</a>
           </li>
         </ul>
