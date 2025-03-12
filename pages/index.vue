@@ -67,7 +67,7 @@
               <ul class="list-group-numbered">
                   <li class="list-group-item">Menginformasikan petunjuk kegiatan operasi jaringan irigasi</li>
                   <li class="list-group-item">Mengoperasikan petunjuk kegiatan pemeliharaan irigasi</li>
-                  <li class="list-group-item">Menginformasikan realisasi tanam periode 2 mingguan</li>
+                  <li class="list-group-item">Pemantauan kondisi tanaman periode 2 mingguan</li>
                   <li class="list-group-item">Menginformasikan rencana pemberian air di petak-petak sawah pada wilayah kerja UPTD PSDA WS Citanduy</li>
                   <li class="list-group-item">Sebagai pedoman dalam melaksanakan tugas oleh petugas lapangan (Koordinator SUP, Mantri/Juru, Petugas Pintu Air(PPA), Petugas Operasi Bendung(POB) )</li>
               </ul>
@@ -202,35 +202,3 @@
       justify-content: center; 
   }
   </style>
-
-  <!-- <template>
-    <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</template> -->
