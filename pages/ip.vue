@@ -1,10 +1,10 @@
 <script setup>
 useHead({
-  title: "IP",
+  title: "Ip",
   meta: [
     {
       name: "description",
-      content: "IP",
+      content: "Ip",
     },
   ],
 });
@@ -16,7 +16,7 @@ const periodeData = ref(null); // Data periode dari database
 const editingPeriode = ref(false); // Status edit periode
 
 // Fungsi untuk mengambil data alokasi
-const getAlokasi = async () => {
+const getIp = async () => {
   const { data } = await supabase.from("ip").select("*").order("id", { ascending: true });
   if (data) {
     visitors.value = data;
@@ -137,7 +137,7 @@ const calculateTotal = () => {
 };
 
 onMounted(() => {
-  getAlokasi();
+  getIp();
   getPeriode(); // Ambil data periode saat komponen di-mount
 });
 </script>
