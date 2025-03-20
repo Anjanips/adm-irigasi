@@ -1,10 +1,10 @@
 <script setup>
 useHead({
-  title: "Ip",
+  title: "IP",
   meta: [
     {
       name: "description",
-      content: "Ip",
+      content: "IP",
     },
   ],
 });
@@ -189,7 +189,7 @@ onMounted(() => {
           <td>{{ visitor.mt_3 }}</td>
           <td>{{ visitor.jumlah }}</td>
           <td>
-            <button @click="editVisitor(visitor)" class="btn btn-warning">Edit</button> <!-- Tombol edit -->
+            <button @click="editVisitor(visitor)" class="btn btn-primary">Edit</button> <!-- Tombol edit -->
           </td>
         </tr>
         <tr>
