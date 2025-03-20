@@ -189,7 +189,7 @@ onMounted(() => {
           <td>{{ visitor.minggu_ke1 }}</td>
           <td>{{ visitor.minggu_ke2 }}</td>
           <td>
-            <button @click="editVisitor(visitor)" class="btn btn-warning">Edit</button> <!-- Tombol edit -->
+            <button @click="editVisitor(visitor)" class="btn btn-primary">Edit</button> <!-- Tombol edit -->
           </td>
         </tr>
         <tr>
