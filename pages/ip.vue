@@ -127,14 +127,23 @@ const cancelPeriodeEdit = () => {
 };
 
 // Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1 & 2
-const calculateTotal = () => {
+const calculateAverage = () => {
   const totalMt1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_1 || 0), 0);
   const totalMt2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_2 || 0), 0);
   const totalMt3 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_3 || 0), 0);
   const totalJumlah = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.jumlah || 0), 0);
 
-  return { totalMt1, totalMt2, totalMt3, totalJumlah };
+  const numberOfVisitors = visitors.value.length;
+
+  // To avoid division by zero, check if numberOfVisitors is greater than 0
+  const avgMt1 = numberOfVisitors > 0 ? totalMt1 / numberOfVisitors : 0;
+  const avgMt2 = numberOfVisitors > 0 ? totalMt2 / numberOfVisitors : 0;
+  const avgMt3 = numberOfVisitors > 0 ? totalMt3 / numberOfVisitors : 0;
+  const avgJumlah = numberOfVisitors > 0 ? totalJumlah / numberOfVisitors : 0;
+
+  return { avgMt1, avgMt2, avgMt3, avgJumlah };
 };
+
 
 onMounted(() => {
   getIp();
