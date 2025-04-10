@@ -145,7 +145,7 @@ const cancelPeriodeEdit = () => {
 // };
 
 const getFooterTotals = async () => {
-  const { data, error } = await supabase.from("jml_iksi").select("*").single(); // Fetch a single row from jml_iksi
+  const { data, error } = await supabase.from("jml_ip").select("*").single(); // Fetch a single row from jml_iksi
   if (data) {
     footerTotals.value = data; // Update footerTotals with the actual data from jml_iksi table
   } else {
