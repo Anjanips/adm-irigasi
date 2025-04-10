@@ -207,7 +207,7 @@ const saveFooterTotals = async () => {
   try {
     // Menyimpan perubahan footer totals ke database
     const { error } = await supabase
-      .from("jml_iksi")  // Sesuaikan dengan tabel yang Anda miliki
+      .from("jml_ip")  // Sesuaikan dengan tabel yang Anda miliki
       .upsert([editingFooter.value], { onConflict: ['id'] });  // asumsikan ada ID unik untuk footer totals
 
     if (error) throw error;
