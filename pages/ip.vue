@@ -11,17 +11,9 @@ useHead({
 
 const supabase = useSupabaseClient();
 const visitors = ref([]);
-const editingVisitor = ref(null);
-const isModalOpen = ref(false);
-const isFooterEditOpen = ref(false);
 const selectedVisitor = ref(null); // Visitor yang dipilih untuk diedit
 const periodeData = ref(null); // Data periode dari database
 const editingPeriode = ref(false); // Status edit periode
-// Store footer totals in a reactive object
-const footerTotals = ref({});
-
-// Copy for editing
-const editingFooter = ref(null);
 
 // Fungsi untuk mengambil data alokasi
 const getIp = async () => {
@@ -98,9 +90,9 @@ const savePeriodeChanges = async () => {
 };
 
 // Fungsi untuk mengedit data visitor
-// const editVisitor = (visitor) => {
-//   selectedVisitor.value = { ...visitor }; // Menyalin data visitor yang akan diedit
-// };
+const editVisitor = (visitor) => {
+  selectedVisitor.value = { ...visitor }; // Menyalin data visitor yang akan diedit
+};
 
 // Fungsi untuk menyimpan perubahan setelah edit
 const saveChanges = async () => {
@@ -135,96 +127,18 @@ const cancelPeriodeEdit = () => {
 };
 
 // Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1 & 2
-// const calculateTotal = () => {
-//   const totalMt1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_1 || 0), 0);
-//   const totalMt2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_2 || 0), 0);
-//   const totalMt3 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_3 || 0), 0);
-//   const totalJumlah = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.jumlah || 0), 0);
+const calculateTotal = () => {
+  const totalMt1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_1 || 0), 0);
+  const totalMt2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_2 || 0), 0);
+  const totalMt3 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_3 || 0), 0);
+  const totalJumlah = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.jumlah || 0), 0);
 
-//   return { totalMt1, totalMt2, totalMt3, totalJumlah };
-// };
-
-const getFooterTotals = async () => {
-  const { data, error } = await supabase.from("jml_ip").select("*").single(); // Fetch a single row from jml_iksi
-  if (data) {
-    footerTotals.value = data; // Update footerTotals with the actual data from jml_iksi table
-  } else {
-    console.error('Error fetching footer totals:', error);
-  }
-};
-
-const openEditModal = (visitor) => {
-  editingVisitor.value = { ...visitor };
-  isModalOpen.value = true;
-};
-
-const openFooterEditModal = () => {
-  editingFooter.value = { ...footerTotals.value };
-  isFooterEditOpen.value = true;
-};
-
-const closeModal = () => {
-  isModalOpen.value = false;
-  editingVisitor.value = null;
-};
-
-const closeFooterEditModal = () => {
-  isFooterEditOpen.value = false;
-  editingFooter.value = null;
-};
-
-// const saveChanges = async () => {
-//   if (!editingVisitor.value) return;
-
-//   try {
-//     const { error } = await supabase
-//       .from("iksi")
-//       .update(editingVisitor.value)
-//       .eq("id", editingVisitor.value.id);
-
-//     if (error) throw error;
-
-//     // Update the local data immediately without refetching
-//     const index = visitors.value.findIndex(v => v.id === editingVisitor.value.id);
-//     if (index !== -1) {
-//       // Directly modify the visitor data at the specified index
-//       visitors.value[index] = { ...editingVisitor.value };
-
-//       // Optionally sort the data if needed
-//       visitors.value.sort((a, b) => a.id - b.id);
-//     }
-
-//     closeModal();
-//   } catch (error) {
-//     console.error("Error saving changes:", error);
-//     alert("Gagal menyimpan perubahan. Silakan coba lagi.");
-//   }
-// };
-
-const saveFooterTotals = async () => {
-  if (!editingFooter.value) return;
-
-  try {
-    // Menyimpan perubahan footer totals ke database
-    const { error } = await supabase
-      .from("jml_ip")  // Sesuaikan dengan tabel yang Anda miliki
-      .upsert([editingFooter.value], { onConflict: ['id'] });  // asumsikan ada ID unik untuk footer totals
-
-    if (error) throw error;
-
-    // Update data lokal jika berhasil
-    footerTotals.value = { ...editingFooter.value };
-    closeFooterEditModal();
-  } catch (error) {
-    console.error("Error saving footer totals:", error);
-    alert("Gagal menyimpan perubahan footer totals. Silakan coba lagi.");
-  }
+  return { totalMt1, totalMt2, totalMt3, totalJumlah };
 };
 
 onMounted(() => {
   getIp();
-  getPeriode();
-  getFooterTotals(); // Ambil data periode saat komponen di-mount
+  getPeriode(); // Ambil data periode saat komponen di-mount
 });
 </script>
 
@@ -268,108 +182,59 @@ onMounted(() => {
       </thead>
       <tbody>
         <tr v-for="(visitor, i) in visitors" :key="i">
-            <th scope="row">{{ i + 1 }}.</th>
-            <td>{{ visitor.nama_di }}</td>
-            <td class="text-end">{{ visitor.mt_1 }}</td>
-            <td class="text-end">{{ visitor.mt_2 }}</td>
-            <td class="text-end">{{ visitor.mt_3 }}</td>
-            <td class="text-center">{{ visitor.jumlah }}</td>
-            <td>
-              <button @click="openEditModal(visitor)" class="btn btn-primary btn-sm" style="color:white;">
-                Edit
-              </button>
-            </td>
-          </tr>
-        <tfoot>
-          <tr class="table-light">
-            <td colspan="3" class="text-center">Jumlah</td>
-            <td class="text-end">{{ footerTotals.mt_1 }}</td>
-            <td class="text-end">{{ footerTotals.mt_2 }}</td>
-            <td class="text-end">{{ footerTotals.mt_3 }}</td>
-            <td class="text-center">{{ footerTotals.jumlah }}</td>
-            <td>
-              <button @click="openFooterEditModal()" class="btn btn-primary btn-sm" style="color:white;">
-                Edit
-              </button>
-            </td>
-          </tr>
-        </tfoot>
-        <!-- <tr>
+          <th scope="row">{{ i + 1 }}.</th>
+          <td>{{ visitor.nama_di }}</td>
+          <td>{{ visitor.mt_1 }}</td>
+          <td>{{ visitor.mt_2 }}</td>
+          <td>{{ visitor.mt_3 }}</td>
+          <td>{{ visitor.jumlah }}</td>
+          <td>
+            <button @click="editVisitor(visitor)" class="btn btn-primary">Edit</button> <!-- Tombol edit -->
+          </td>
+        </tr>
+        <tr>
           <th scope="row"></th>
-          <td><strong>Rata-rata</strong></td>
-          <td>{{ calculateTotal().totalMt1.toFixed(2) }}</td> 
-          <td>{{ calculateTotal().totalMt2.toFixed(2) }}</td> 
-          <td>{{ calculateTotal().totalMt3.toFixed(2) }}</td> 
-          <td>{{ calculateTotal().totalJumlah.toFixed(2) }}</td> <
+          <td><strong>Jumlah Akhir</strong></td>
+          <td>{{ calculateTotal().totalMt1.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 1 -->
+          <td>{{ calculateTotal().totalMt2.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 2 -->
+          <td>{{ calculateTotal().totalMt3.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 3 -->
+          <td>{{ calculateTotal().totalJumlah.toFixed(2) }}</td> <!-- Menampilkan total jumlah -->
           <td></td>
-        </tr> -->
+        </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Edit Modal for Row Data -->
-  <div v-if="isModalOpen" class="modal-overlay" @click.self="closeModal">
-      <div class="modal-content">
-        <h5 class="modal-title">Edit Data</h5>
-        <div v-if="editingVisitor" class="edit-form">
-          <div class="form-group mb-2">
-            <label for="nama_di">Nama Daerah Irigasi</label>
-            <input v-model="editingVisitor.nama_di" type="text" id="nama_di" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="mt_1">Masa Tanam 1</label>
-            <input v-model="editingVisitor.mt_1" type="text" id="mt_1" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="mt_2">Masa Tanam 2</label>
-            <input v-model="editingVisitor.mt_2" type="text" id="mt_2" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="mt_3">Masa Tanam 3</label>
-            <input v-model="editingVisitor.mt_3" type="text" id="mt_3" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="jumlah">Jumlah</label>
-            <input v-model="editingVisitor.jumlah" type="text" id="jumlah" class="form-control" />
-          </div>
-
-          <div class="modal-footer mt-3">
-            <button @click="closeModal" class="btn btn-secondary me-2">Batal</button>
-            <button @click="saveChanges" class="btn btn-primary">Simpan</button>
-          </div>
+  <!-- Modal untuk edit data visitor -->
+  <div v-if="selectedVisitor" class="modal">
+    <div class="modal-content">
+      <h2>Edit Data Ip</h2>
+      <form @submit.prevent="saveChanges">
+        <div>
+          <label for="nama_petak">Nama DI:</label>
+          <input type="text" v-model="selectedVisitor.nama_di" />
         </div>
-      </div>
-    </div>
-
-  <!-- Edit Modal for Footer Totals -->
-  <div v-if="isFooterEditOpen" class="modal-overlay" @click.self="closeFooterEditModal">
-      <div class="modal-content">
-        <h5 class="modal-title">Edit Jumlah Total</h5>
-        <div v-if="editingFooter" class="edit-form">
-          <div class="form-group mb-2">
-            <label for="footer_mt_1">Masa Tanam 1</label>
-            <input v-model="editingFooter.mt_1" type="text" id="footer_mt_1" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="footer_mt_2">Masa Tanam 2</label>
-            <input v-model="editingFooter.mt_2" type="text" id="footer_mt_2" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="footer_mt_3">Masa Tanam 3</label>
-            <input v-model="editingFooter.mt_3" type="text" id="footer_mt_3" class="form-control" />
-          </div>
-          <div class="form-group mb-2">
-            <label for="footer_jumlah">Jumlah</label>
-            <input v-model="editingFooter.jumlah" type="text" id="footer_jumlah" class="form-control" />
-          </div>
-
-          <div class="modal-footer mt-3 ">
-            <button @click="closeFooterEditModal" class="btn btn-secondary me-2">Batal</button>
-            <button @click="saveFooterTotals" class="btn btn-primary">Simpan</button>
-          </div>
+        <div>
+          <label for="luas_areal">Masa Tanam 1:</label>
+          <input type="text" v-model="selectedVisitor.mt_1" />
         </div>
-      </div>
+        <div>
+          <label for="realisasi">Masa Tanam 2:</label>
+          <input type="text" v-model="selectedVisitor.mt_2" />
+        </div>
+        <div>
+          <label for="minggu_ke1">Masa Tanam 3:</label>
+          <input type="text" v-model="selectedVisitor.mt_3" />
+        </div>
+        <div>
+          <label for="minggu_ke2">Jumlah:</label>
+          <input type="text" v-model="selectedVisitor.jumlah" />
+        </div>
+        <button type="submit">Simpan</button>
+        <button type="button" @click="selectedVisitor = null">Batal</button>
+      </form>
     </div>
+  </div>
 </template>
 
 <style scoped>
