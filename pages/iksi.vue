@@ -189,7 +189,6 @@ onMounted(() => {
 <template>
     <div class="judul m-5 text-center">
     <h2>REKAP IKSI</h2>
-    <h2>UPTD PSDA WILAYAH SUNGAI CITANDUY</h2>
     <div>
       <!-- Tampilkan judul periode dari database -->
       <div v-if="!editingPeriode">
@@ -210,6 +209,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <h2>UPTD PSDA WILAYAH SUNGAI CITANDUY</h2>
   </div>
 
   <div class="">
