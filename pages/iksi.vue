@@ -14,6 +14,8 @@ const visitors = ref([]);
 const editingVisitor = ref(null);
 const isModalOpen = ref(false);
 const isFooterEditOpen = ref(false);
+const periodeData = ref(null); // Data periode dari database
+const editingPeriode = ref(false); // Status edit periode
 
 // Store footer totals in a reactive object
 const footerTotals = ref({});
@@ -24,6 +26,79 @@ const editingFooter = ref(null);
 const getIksi = async () => {
   const { data } = await supabase.from("iksi").select("*");
   if (data) visitors.value = data;
+};
+
+// Fungsi untuk mengambil data periode dari database
+const getPeriode = async () => {
+  try {
+    const { data, error } = await supabase.from("periode").select("*").single();
+
+    if (error) {
+      throw error;
+    }
+
+    if (data) {
+      periodeData.value = data;
+    } else {
+      // Jika tidak ada data, buat objek kosong
+      periodeData.value = {
+        judul: "PERIODE: TAHUN 2023/2024" // Default fallback
+      };
+    }
+  } catch (error) {
+    console.error("Error fetching periode data:", error.message);
+    // Tetap sediakan nilai default jika terjadi error
+    periodeData.value = {
+      judul: "PERIODE: TAHUN 2023/2024"
+    };
+  }
+};
+
+// Fungsi untuk mengedit periode
+const editPeriode = () => {
+  editingPeriode.value = true;
+};
+
+// Fungsi untuk menyimpan perubahan periode
+const savePeriodeChanges = async () => {
+  try {
+    if (!periodeData.value.judul || periodeData.value.judul.trim() === '') {
+      alert("Judul periode tidak boleh kosong");
+      return;
+    }
+
+    if (periodeData.value.id) {
+      // Update data yang sudah ada
+      const { error } = await supabase
+        .from("periode")
+        .update({ judul: periodeData.value.judul })
+        .eq("id", periodeData.value.id);
+
+      if (error) throw error;
+    } else {
+      // Insert data baru jika belum ada
+      const { error } = await supabase
+        .from("periode")
+        .insert([{ judul: periodeData.value.judul }]);
+
+      if (error) throw error;
+
+      // Ambil data yang baru saja diinsert untuk mendapatkan ID
+      await getPeriode();
+    }
+
+    editingPeriode.value = false;
+  } catch (error) {
+    console.error("Error saving periode data:", error.message);
+    alert("Gagal menyimpan data periode: " + error.message);
+  }
+};
+
+// Fungsi untuk membatalkan edit periode
+const cancelPeriodeEdit = () => {
+  editingPeriode.value = false;
+  // Reload data periode untuk memastikan data sesuai dengan database
+  getPeriode();
 };
 
 const getFooterTotals = async () => {
@@ -107,10 +182,35 @@ const saveFooterTotals = async () => {
 onMounted(() => {
   getIksi();
   getFooterTotals(); // Fetch footer totals when the component is mounted
+  getPeriode();
 });
 </script>
 
 <template>
+    <div class="judul m-5 text-center">
+    <h2>REKAP IKSI TAHUN 2024</h2>
+    <div>
+      <!-- Tampilkan judul periode dari database -->
+      <div v-if="!editingPeriode">
+        <h3>{{ periodeData?.judul }}</h3>
+        <button @click="editPeriode" class="btn btn-primary">Edit Periode</button>
+      </div>
+
+      <!-- Form edit periode -->
+      <div v-else class="periode-edit-form">
+        <div class="form-group">
+          <label for="judul">Judul Periode:</label>
+          <input type="text" id="judul" v-model="periodeData.judul" class="form-control"
+            placeholder="Masukkan judul periode" />
+        </div>
+        <div class="button-group">
+          <button @click="savePeriodeChanges" class="btn btn-success">Simpan</button>
+          <button @click="cancelPeriodeEdit" class="btn btn-danger">Batal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="">
     <!-- Table Content -->
     <h1 class="text-center h4 font-weight-bold mb-4">REKAP IKSI TAHUN 2024</h1>
