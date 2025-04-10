@@ -192,14 +192,16 @@ onMounted(() => {
             <button @click="editVisitor(visitor)" class="btn btn-primary">Edit</button> <!-- Tombol edit -->
           </td>
         </tr>
-        <tr>
+        <tr v-for="(visitor, i) in visitors" :key="i">
           <th scope="row"></th>
-          <td><strong>Jumlah Akhir</strong></td>
+          <td><strong>Rata-rata</strong></td>
           <td>{{ calculateTotal().totalMt1.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 1 -->
           <td>{{ calculateTotal().totalMt2.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 2 -->
           <td>{{ calculateTotal().totalMt3.toFixed(2) }}</td> <!-- Menampilkan total masa tanam 3 -->
           <td>{{ calculateTotal().totalJumlah.toFixed(2) }}</td> <!-- Menampilkan total jumlah -->
-          <td></td>
+          <td>
+            <button @click="editVisitor(visitor)" class="btn btn-primary">Edit</button> <!-- Tombol edit -->
+          </td>
         </tr>
       </tbody>
     </table>
