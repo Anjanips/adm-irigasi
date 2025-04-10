@@ -147,6 +147,7 @@ const calculateAverage = () => {
 
 onMounted(() => {
   getIp();
+  calculateAverage();
   getPeriode(); // Ambil data periode saat komponen di-mount
 });
 </script>
