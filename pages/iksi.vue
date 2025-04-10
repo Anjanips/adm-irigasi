@@ -189,6 +189,7 @@ onMounted(() => {
 <template>
     <div class="judul m-5 text-center">
     <h2>REKAP IKSI TAHUN 2024</h2>
+    <h2 class="text-center h5 mb-6">UPTD PSDA WILAYAH SUNGAI CITANDUY</h2>
     <div>
       <!-- Tampilkan judul periode dari database -->
       <div v-if="!editingPeriode">
@@ -213,7 +214,6 @@ onMounted(() => {
 
   <div class="">
     <!-- Table Content -->
-    <h1 class="text-center h4 font-weight-bold mb-4">REKAP IKSI TAHUN 2024</h1>
     <h2 class="text-center h5 mb-6">UPTD PSDA WILAYAH SUNGAI CITANDUY</h2>
     <div class="table-container">
       <table class="table table-bordered">
