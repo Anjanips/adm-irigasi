@@ -82,13 +82,42 @@
           </div>
     </div>
   
-      <div id="profil" class="container">
+    <div id="profil" class="container">
         <div class="section">
           <h2 class="p-3">PROFIL</h2>
           <h4 class="text-center">UPTD PSDA WS CITANDUY</h4>
         </div>
+    </div>
+      <div class="card text-bg-dark">
+        <img src="assets/img/p1.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        </div>
       </div>
-      
+      <div class="card text-bg-dark">
+        <img src="assets/img/p2.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        </div>
+      </div>
+      <div class="card text-bg-dark">
+        <img src="assets/img/p3.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        </div>
+      </div>
+      <div class="card text-bg-dark">
+        <img src="assets/img/p4.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        </div>
+      </div>
+      <div class="card text-bg-dark">
+        <img src="assets/img/p5.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        </div>
+      </div>
+      <div class="card text-bg-dark">
+        <img src="assets/img/p6.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+        </div>
+      </div>
   </template>
   
   <style scoped>
