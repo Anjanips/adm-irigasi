@@ -128,12 +128,6 @@ const cancelPeriodeEdit = () => {
 
 // Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1 & 2
 const calculateTotal = () => {
-  const totalVisitors = visitors.value.length;
-
-  if (totalVisitors === 0) {
-    return { averageMt1: 0, averageMt2: 0, averageMt3: 0, averageJumlah: 0 };
-  }
-
   const totalMt1 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_1 || 0), 0);
   const totalMt2 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_2 || 0), 0);
   const totalMt3 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_3 || 0), 0);
