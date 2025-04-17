@@ -127,7 +127,7 @@ const cancelPeriodeEdit = () => {
 };
 
 // Menghitung jumlah dinamis dari Luas Areal, Realisasi, dan Minggu Ke 1 & 2
-const calculateAverage = () => {
+const calculateTotal = () => {
   const totalVisitors = visitors.value.length;
 
   if (totalVisitors === 0) {
@@ -139,13 +139,7 @@ const calculateAverage = () => {
   const totalMt3 = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.mt_3 || 0), 0);
   const totalJumlah = visitors.value.reduce((acc, visitor) => acc + parseFloat(visitor.jumlah || 0), 0);
 
-  // Menghitung rata-rata
-  const averageMt1 = totalMt1 / totalVisitors;
-  const averageMt2 = totalMt2 / totalVisitors;
-  const averageMt3 = totalMt3 / totalVisitors;
-  const averageJumlah = totalJumlah / totalVisitors;
-
-  return { averageMt1, averageMt2, averageMt3, averageJumlah };
+  return { totalMt1, totalMt2, totalMt3, totalJumlah };
 };
 
 onMounted(() => {
