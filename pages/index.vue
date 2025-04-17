@@ -80,8 +80,14 @@
                   <li class="list-group-item">Terjaganya ketahanan pangan seluas 5.729,17 Hektar </li>
               </ul>
           </div>
-      </div>
+    </div>
   
+      <div id="profil" class="container">
+        <div class="section">
+          <h2 class="p-3">PROFIL</h2>
+          <h4 class="text-center">UPTD PSDA WS CITANDUY</h4>
+        </div>
+      </div>
       
   </template>
   
